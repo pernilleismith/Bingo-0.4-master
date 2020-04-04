@@ -15,9 +15,9 @@ class BingoBonger: UIViewController {
     var numberArrayI1 = Array(16...30).map{"\($0)"}
     
     var numberArrayN1 = Array(31...45).map{"\($0)"}
-
+    
     var numberArrayG1 = Array(46...60).map{"\($0)"}
-
+    
     var numberArrayO1 = Array(61...75).map{"\($0)"}
     
     override func viewDidLoad() {
@@ -113,43 +113,43 @@ class BingoBonger: UIViewController {
         
     }
     
-  
-  // "B"-outlets bingobong 1
+    
+    // "B"-outlets bingobong 1
     @IBOutlet weak var b1: UIButton!
     @IBOutlet weak var b2: UIButton!
     @IBOutlet weak var b3: UIButton!
     @IBOutlet weak var b4: UIButton!
     @IBOutlet weak var b5: UIButton!
     
- // "B"-outlets bingobong 2
+    // "B"-outlets bingobong 2
     @IBOutlet weak var b6: UIButton!
     @IBOutlet weak var b7: UIButton!
     @IBOutlet weak var b8: UIButton!
     @IBOutlet weak var b9: UIButton!
     @IBOutlet weak var b10: UIButton!
- 
- // "B"- Outlets bingobong 3
+    
+    // "B"- Outlets bingobong 3
     @IBOutlet weak var b11: UIButton!
     @IBOutlet weak var b12: UIButton!
     @IBOutlet weak var b13: UIButton!
     @IBOutlet weak var b14: UIButton!
     @IBOutlet weak var b15: UIButton!
     
- // "I"-outlets bingobong 1
+    // "I"-outlets bingobong 1
     @IBOutlet weak var i1: UIButton!
     @IBOutlet weak var i2: UIButton!
     @IBOutlet weak var i3: UIButton!
     @IBOutlet weak var i4: UIButton!
     @IBOutlet weak var i5: UIButton!
     
- // "I"-outlets bingobong 2
+    // "I"-outlets bingobong 2
     @IBOutlet weak var i6: UIButton!
     @IBOutlet weak var i7: UIButton!
     @IBOutlet weak var i8: UIButton!
     @IBOutlet weak var i9: UIButton!
     @IBOutlet weak var i10: UIButton!
     
- // "I"-outlets bingbong 3
+    // "I"-outlets bingbong 3
     @IBOutlet weak var i11: UIButton!
     @IBOutlet weak var i12: UIButton!
     @IBOutlet weak var i13: UIButton!
@@ -157,21 +157,21 @@ class BingoBonger: UIViewController {
     @IBOutlet weak var i15: UIButton!
     
     
- // "N"-outlets bingobong 1
+    // "N"-outlets bingobong 1
     @IBOutlet weak var n1: UIButton!
     @IBOutlet weak var n2: UIButton!
     @IBOutlet weak var n3: UIButton!
     @IBOutlet weak var n4: UIButton!
     @IBOutlet weak var n5: UIButton!
     
- // "N"-outlets bingbong 2
+    // "N"-outlets bingbong 2
     @IBOutlet weak var n6: UIButton!
     @IBOutlet weak var n7: UIButton!
     @IBOutlet weak var n8: UIButton!
     @IBOutlet weak var n9: UIButton!
     @IBOutlet weak var n10: UIButton!
     
- // "N"-outlets bingobong 3
+    // "N"-outlets bingobong 3
     @IBOutlet weak var n11: UIButton!
     @IBOutlet weak var n12: UIButton!
     @IBOutlet weak var n13: UIButton!
@@ -179,21 +179,21 @@ class BingoBonger: UIViewController {
     @IBOutlet weak var n15: UIButton!
     
     
- // "G"-outlets bingbong 1
+    // "G"-outlets bingbong 1
     @IBOutlet weak var g1: UIButton!
     @IBOutlet weak var g2: UIButton!
     @IBOutlet weak var g3: UIButton!
     @IBOutlet weak var g4: UIButton!
     @IBOutlet weak var g5: UIButton!
     
- // "G"-outlets bingbong 2
+    // "G"-outlets bingbong 2
     @IBOutlet weak var g6: UIButton!
     @IBOutlet weak var g7: UIButton!
     @IBOutlet weak var g8: UIButton!
     @IBOutlet weak var g9: UIButton!
     @IBOutlet weak var g10: UIButton!
     
- // "G"-outlets bingbong 3
+    // "G"-outlets bingbong 3
     @IBOutlet weak var g11: UIButton!
     @IBOutlet weak var g12: UIButton!
     @IBOutlet weak var g13: UIButton!
@@ -201,42 +201,42 @@ class BingoBonger: UIViewController {
     @IBOutlet weak var g15: UIButton!
     
     
- // "O"-outlets bingbong 1
+    // "O"-outlets bingbong 1
     @IBOutlet weak var o1: UIButton!
     @IBOutlet weak var o2: UIButton!
     @IBOutlet weak var o3: UIButton!
     @IBOutlet weak var o4: UIButton!
     @IBOutlet weak var o5: UIButton!
     
- // "O"-outlets bingbong 2
+    // "O"-outlets bingbong 2
     @IBOutlet weak var o6: UIButton!
     @IBOutlet weak var o7: UIButton!
     @IBOutlet weak var o8: UIButton!
     @IBOutlet weak var o9: UIButton!
     @IBOutlet weak var o10: UIButton!
     
- // "O"-outlets bingbong 3
+    // "O"-outlets bingbong 3
     @IBOutlet weak var o11: UIButton!
     @IBOutlet weak var o12: UIButton!
     @IBOutlet weak var o13: UIButton!
     @IBOutlet weak var o14: UIButton!
     @IBOutlet weak var o15: UIButton!
-
+    
     
     var checkedButtons = [String]()
     var rows = [String]()
     
     func popUpButtonAction(bingoText: String) {
         var popUpWindow: PopUpWindow!
-           popUpWindow = PopUpWindow(title: bingoText, text: "", buttontext: "Back to Pernille´s bingo")
-           self.present(popUpWindow, animated: true, completion: nil)
+        popUpWindow = PopUpWindow(title: bingoText, text: "", buttontext: "Back to Pernille´s bingo")
+        self.present(popUpWindow, animated: true, completion: nil)
     }
     
-     func bingo(board: Int, numberOfBingos: Int){
-           let singularOrPluralRow = numberOfBingos > 1 ? "rows" : "row"
-           let bingoText = "Bingo - \(numberOfBingos) \(singularOrPluralRow)"
-           popUpButtonAction(bingoText:bingoText)
-       }
+    func bingo(board: Int, numberOfBingos: Int){
+        let singularOrPluralRow = numberOfBingos > 1 ? "rows" : "row"
+        let bingoText = "Bingo - \(numberOfBingos) \(singularOrPluralRow)"
+        popUpButtonAction(bingoText:bingoText)
+    }
     
     func checkBingo(buttonId: String){
         if !checkedButtons.contains(buttonId){
@@ -245,7 +245,7 @@ class BingoBonger: UIViewController {
             //Check bingo
             let rowString = String(buttonId.dropFirst())
             rows.append(rowString)
-    
+            
             if rows.filter({$0 == rowString}).count == 5 {
                 let bingosInBoard1 = bingosInBoard(board: 0)
                 let bingosInBoard2 = bingosInBoard(board: 1)
@@ -324,11 +324,11 @@ class BingoBonger: UIViewController {
             checkBingo(buttonId: buttonId)
         }
     }
-
+    
     //segueway
-
+    
     @IBAction func backButtonPressed(_ sender: UIButton) {
-     self.performSegue(withIdentifier: "ViewController", sender: self)
+        self.performSegue(withIdentifier: "ViewController", sender: self)
     }
     
 }
