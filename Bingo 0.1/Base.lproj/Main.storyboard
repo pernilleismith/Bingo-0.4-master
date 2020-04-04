@@ -1,0 +1,1268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bingo_0_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bingo med pernille" translatesAutoresizingMaskIntoConstraints="NO" id="6Nq-fR-lg5">
+                                <rect key="frame" x="0.0" y="123" width="414" height="808"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRP-m6-9h5">
+                                <rect key="frame" x="83" y="534" width="248" height="82"/>
+                                <state key="normal" backgroundImage="Button-2"/>
+                                <connections>
+                                    <action selector="letsBingoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GD0-pf-ud5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Nq-fR-lg5" secondAttribute="trailing" id="BvF-JV-sf5"/>
+                            <constraint firstItem="6Nq-fR-lg5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="123" id="Ewi-LD-WS7"/>
+                            <constraint firstItem="6Nq-fR-lg5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YG9-Fq-Lsu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6Nq-fR-lg5" secondAttribute="bottom" constant="-123" id="Z7t-Zj-S9Q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kRP-m6-9h5" secondAttribute="trailing" constant="83" id="aD0-h4-7sI"/>
+                            <constraint firstItem="6Nq-fR-lg5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aUG-xm-aj1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kRP-m6-9h5" secondAttribute="bottom" constant="192" id="fX4-pp-uey"/>
+                            <constraint firstItem="kRP-m6-9h5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="534" id="oxW-zg-AXX"/>
+                            <constraint firstItem="6Nq-fR-lg5" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="123" id="sY0-7a-W8A"/>
+                            <constraint firstItem="kRP-m6-9h5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="83" id="xdH-Hc-k8W"/>
+                            <constraint firstItem="6Nq-fR-lg5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="123" id="ymH-oy-SSn"/>
+                            <constraint firstItem="6Nq-fR-lg5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zoA-fw-wcs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <segue destination="q5C-WA-5yN" kind="presentation" identifier="BingoBonger" id="syH-OE-7yU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
+        </scene>
+        <!--View Controller bingoBonger-->
+        <scene sceneID="QdK-VE-uEQ">
+            <objects>
+                <viewController id="q5C-WA-5yN" userLabel="View Controller bingoBonger" customClass="BingoBonger" customModule="Bingo_0_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7du-Sq-drf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bingo banner" translatesAutoresizingMaskIntoConstraints="NO" id="tLF-yi-uhq">
+                                <rect key="frame" x="47" y="0.0" width="320" height="100"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="JgE-Z6-JuG" userLabel="BingoStackView">
+                                <rect key="frame" x="76" y="91" width="262" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Glx-SQ-2Ge">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                        <state key="normal" title="B">
+                                            <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieK-BH-3tN">
+                                        <rect key="frame" x="53" y="0.0" width="50.5" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                        <state key="normal" title="I">
+                                            <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9T-qt-VRA">
+                                        <rect key="frame" x="105.5" y="0.0" width="51" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                        <state key="normal" title="N">
+                                            <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xe7-iT-an4">
+                                        <rect key="frame" x="158.5" y="0.0" width="50.5" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                        <state key="normal" title="G">
+                                            <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNn-rm-xdG">
+                                        <rect key="frame" x="211" y="0.0" width="51" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                        <state key="normal" title="O">
+                                            <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4Qe-hP-Lrq"/>
+                                    <constraint firstAttribute="width" constant="262" id="HgT-Nc-ZbC"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Plp-Zb-a2g"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="1Qb-EA-epH" userLabel="3rdStackView">
+                                <rect key="frame" x="76" y="597" width="262" height="211"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Uvc-Yu-Uel">
+                                        <rect key="frame" x="0.0" y="0.0" width="262" height="40.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAX-9L-j25">
+                                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="40.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="B11"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="B11">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="Axj-gi-25N"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arj-Ms-M4g">
+                                                <rect key="frame" x="52.5" y="0.0" width="51.5" height="40.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="I11"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="I11">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="LHw-ba-haA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytJ-B5-fkj">
+                                                <rect key="frame" x="105" y="0.0" width="52" height="40.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="N11"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="N11">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="vtP-Jm-AG8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="co1-5H-Dbg">
+                                                <rect key="frame" x="158" y="0.0" width="51.5" height="40.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="G11"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="G11">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="aFJ-D1-m07"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nts-FW-yLs">
+                                                <rect key="frame" x="210.5" y="0.0" width="51.5" height="40.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="O11"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="O11">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="lFX-dt-hUo"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ziu-BH-08j">
+                                        <rect key="frame" x="0.0" y="42.5" width="262" height="40.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bju-sa-j4l">
+                                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="40.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="B12"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="B12">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="3l3-mK-2Mg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKu-DA-kWR">
+                                                <rect key="frame" x="52.5" y="0.0" width="51.5" height="40.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="I12"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="I12">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="PtM-QO-ExX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cj3-Ps-fA5">
+                                                <rect key="frame" x="105" y="0.0" width="52" height="40.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="N12"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="N12">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="vRc-gB-6fS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ao-LO-yZf">
+                                                <rect key="frame" x="158" y="0.0" width="51.5" height="40.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="G12"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="G12">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="gqw-4f-wqd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3se-DA-cQa">
+                                                <rect key="frame" x="210.5" y="0.0" width="51.5" height="40.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="O12"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="O12">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="jER-T1-Rnh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="hC3-rl-0EA">
+                                        <rect key="frame" x="0.0" y="85" width="262" height="41"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUZ-SA-6b6">
+                                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="41"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="B13"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="B13">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="mjg-st-grD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfh-Up-Kfo">
+                                                <rect key="frame" x="52.5" y="0.0" width="51.5" height="41"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="I13"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="I13">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="GDU-ba-hSv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0h-T6-dl8">
+                                                <rect key="frame" x="105" y="0.0" width="52" height="41"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="N13"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="N13">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="pEC-je-xfC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoX-cY-xvp">
+                                                <rect key="frame" x="158" y="0.0" width="51.5" height="41"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="G13"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="G13">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="Jr6-Wv-B4J"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rS-D8-ckB">
+                                                <rect key="frame" x="210.5" y="0.0" width="51.5" height="41"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="O13"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="O13">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="x9D-Cj-Dop"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="MVW-xE-gvU">
+                                        <rect key="frame" x="0.0" y="128" width="262" height="40.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRR-gF-6ty">
+                                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="40.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="B14"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="B14">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="QUg-Sm-9DC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9b-TF-uVm">
+                                                <rect key="frame" x="52.5" y="0.0" width="51.5" height="40.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="I14"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="I14">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="biS-gb-FUm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69t-fd-cbq">
+                                                <rect key="frame" x="105" y="0.0" width="52" height="40.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="N14"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="N14">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="ldA-yy-xDe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXS-lI-KXL">
+                                                <rect key="frame" x="158" y="0.0" width="51.5" height="40.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="G14"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="G14">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="Kqa-KO-oWv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keh-Su-UI3">
+                                                <rect key="frame" x="210.5" y="0.0" width="51.5" height="40.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="O14"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="O14">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="2yu-nD-waC"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZIt-Yu-vxa">
+                                        <rect key="frame" x="0.0" y="170.5" width="262" height="40.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmd-8k-lMj">
+                                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="40.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="B15"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="B15">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="HMG-Kc-Wgc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3f-ZB-r3U">
+                                                <rect key="frame" x="52.5" y="0.0" width="51.5" height="40.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="I15"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="I15">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="gti-wa-RS2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7b-Zo-WbP">
+                                                <rect key="frame" x="105" y="0.0" width="52" height="40.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="N15"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="N15">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="UNL-fw-bld"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYx-81-ASQ">
+                                                <rect key="frame" x="158" y="0.0" width="51.5" height="40.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="G15"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="G15">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="b8X-a2-OJI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ihn-Mj-Ugj">
+                                                <rect key="frame" x="210.5" y="0.0" width="51.5" height="40.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="O15"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="O15">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="FTk-WR-sNn"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="F0v-wx-KxD">
+                                <rect key="frame" x="76" y="141" width="262" height="208"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="aQN-gH-uWZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="262" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rO-eN-Gbx">
+                                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="B1"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="B1">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="kEv-oX-JGg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vv4-Ma-Rvg">
+                                                <rect key="frame" x="52.5" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="I1"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="I1">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="FxW-f1-sOa"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D51-Ob-saZ">
+                                                <rect key="frame" x="105" y="0.0" width="52" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="N1"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="N1">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="Dyr-vP-V2l"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45i-cG-YZ5">
+                                                <rect key="frame" x="158" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="G1"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="G1">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="Tbf-qE-tgv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSc-ZI-DrR">
+                                                <rect key="frame" x="210.5" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="O1"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="O1">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="IPW-k6-sIf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="UaO-1f-IDv"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="lon-N7-TOu">
+                                        <rect key="frame" x="0.0" y="42" width="262" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n53-Og-Dgi">
+                                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="B2"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="B2">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="Huu-ck-ePU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrx-vZ-RvW">
+                                                <rect key="frame" x="52.5" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="I2"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="I2">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="S9f-NY-ejM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NB7-mE-ZJA">
+                                                <rect key="frame" x="105" y="0.0" width="52" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="N2"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="N2">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="0nX-iE-eWr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuK-b5-cjK">
+                                                <rect key="frame" x="158" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="G2"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="G2">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="nlR-nK-aIV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUM-1h-Y3W">
+                                                <rect key="frame" x="210.5" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="O2"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="O2">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="JFP-sV-7gp"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="7e0-cc-pqv"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Gta-So-Zlf">
+                                        <rect key="frame" x="0.0" y="84" width="262" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUW-ld-B0F">
+                                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="B3"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="B3">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="sdT-mM-ZDZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5N5-Lx-lme">
+                                                <rect key="frame" x="52.5" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="I3"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="I3">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="Iyh-Rp-680"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCD-ms-zLM">
+                                                <rect key="frame" x="105" y="0.0" width="52" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="N3"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="N3">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="L8i-mb-Roy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fxc-Ya-GGp">
+                                                <rect key="frame" x="158" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="G3"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="G3">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="Vbx-0F-gfR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NE7-6m-H5O">
+                                                <rect key="frame" x="210.5" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="O3"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="O3">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="CIg-Av-tqn"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="sPq-Ek-f9t"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="YJg-g0-15z">
+                                        <rect key="frame" x="0.0" y="126" width="262" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAM-pM-0Da">
+                                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="B4"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="B4">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="6wL-ix-don"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbg-82-bvc">
+                                                <rect key="frame" x="52.5" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="I4"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="I4">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="kxt-Fx-c7w"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CN-57-fwp">
+                                                <rect key="frame" x="105" y="0.0" width="52" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="N4"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="N4">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="H0K-gV-TBP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8h-Kk-eE7">
+                                                <rect key="frame" x="158" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="G4"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="G4">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="NgP-nI-94f"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Or3-8K-fEE">
+                                                <rect key="frame" x="210.5" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="O4"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="O4">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="pVE-HP-2bG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="is8-bn-ajw"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="2We-JC-fjZ">
+                                        <rect key="frame" x="0.0" y="168" width="262" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEu-Ks-zu6">
+                                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="B5"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="B5">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="cfb-O7-pxh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ElA-Cd-Ytv">
+                                                <rect key="frame" x="52.5" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="I5"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="I5">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="bKT-CL-g6U"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDK-L1-poz">
+                                                <rect key="frame" x="105" y="0.0" width="52" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="N5"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="N5">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="KEg-PT-6Sl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZX-c9-Oks">
+                                                <rect key="frame" x="158" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="G5"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="G5">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="xYq-i9-nvt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNc-2X-3OJ">
+                                                <rect key="frame" x="210.5" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="O5"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="O5">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="egR-79-5wu"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="peV-pN-f8Q"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="208" id="poV-d5-zU5"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="p2a-0B-h8u" userLabel="2nd StackView">
+                                <rect key="frame" x="76" y="369" width="262" height="208"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="b2V-EN-vgv">
+                                        <rect key="frame" x="0.0" y="0.0" width="262" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nQ-Tg-YBG">
+                                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="B6"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="B6">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="EcU-XO-x4h"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRE-qN-f8c">
+                                                <rect key="frame" x="52.5" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="I6"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="I6">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="fRn-h8-iou"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Le3-sl-en7">
+                                                <rect key="frame" x="105" y="0.0" width="52" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="N6"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="N6">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="9UJ-W7-fxl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rd3-K2-Qvs">
+                                                <rect key="frame" x="158" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="G6"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="G6">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="0up-gc-O1b"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgz-MM-MFZ">
+                                                <rect key="frame" x="210.5" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="O6"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="O6">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="55g-Qz-tQD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="RPs-8U-jTB"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="X3D-uj-ps1">
+                                        <rect key="frame" x="0.0" y="42" width="262" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cO3-Nv-n7x">
+                                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="B7"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="B7">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="yaD-hA-tgJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvi-IX-kg2">
+                                                <rect key="frame" x="52.5" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="I7"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="I7">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="m2p-dV-SZf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYx-LF-nc2">
+                                                <rect key="frame" x="105" y="0.0" width="52" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="N7"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="N7">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="3kA-zC-OMD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rny-HD-Kld">
+                                                <rect key="frame" x="158" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="G7"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="G7">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="7I7-P8-2Ei"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puU-nR-803">
+                                                <rect key="frame" x="210.5" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="O7"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="O7">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="AIS-nk-YLJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="5Ym-Um-UR8"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="loJ-Jm-aIf">
+                                        <rect key="frame" x="0.0" y="84" width="262" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXJ-Dg-gXJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="B8"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="B8">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="vFB-9l-kVb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agz-UB-Prw">
+                                                <rect key="frame" x="52.5" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="I8"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="I8">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="aII-0x-YlA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdL-Jj-woh">
+                                                <rect key="frame" x="105" y="0.0" width="52" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="N8"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="N8">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="ASM-tr-tgV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFt-CC-Xdn">
+                                                <rect key="frame" x="158" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="G8"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="G8">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="OJU-lZ-Fu1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOB-6U-HMu">
+                                                <rect key="frame" x="210.5" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="O8"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="O8">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="BsZ-NB-yay"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="vFP-Y9-beB"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="rkZ-Jj-9bo">
+                                        <rect key="frame" x="0.0" y="126" width="262" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5i-rs-qSU">
+                                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="B9"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="B9">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="vGx-B8-VyL"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kM1-S4-biG">
+                                                <rect key="frame" x="52.5" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="I9"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="I9">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="fkd-eM-0Mh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0az-AG-eRM">
+                                                <rect key="frame" x="105" y="0.0" width="52" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="N9"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="N9">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="H3Y-v2-MHp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3WW-6T-ElM">
+                                                <rect key="frame" x="158" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="G9"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="G9">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="ac6-hp-8g8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQH-dv-8mm">
+                                                <rect key="frame" x="210.5" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="O9"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="O9">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="yCr-2K-JSf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="SyN-fI-WjS"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="FH4-n3-TcR">
+                                        <rect key="frame" x="0.0" y="168" width="262" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHI-zW-TFI">
+                                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="B10"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="B10">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="LJU-u5-uhs"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEs-Jy-G68">
+                                                <rect key="frame" x="52.5" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="I10"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="I10">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="hlW-SB-nsn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48O-C2-bH5">
+                                                <rect key="frame" x="105" y="0.0" width="52" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="N10"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="N10">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="MBY-u9-Ad2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dL3-Kn-qBC">
+                                                <rect key="frame" x="158" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="G10"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="G10">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="3nr-dv-hXG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeA-2y-2E8">
+                                                <rect key="frame" x="210.5" y="0.0" width="51.5" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="O10"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                <state key="normal" title="O10">
+                                                    <color key="titleColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberButton:" destination="q5C-WA-5yN" eventType="touchUpInside" id="xgA-Dr-RqH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Jhr-cE-BsA"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQW-aZ-CUP">
+                                <rect key="frame" x="47" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Qna-2F-23b"/>
+                                    <constraint firstAttribute="width" constant="30" id="rec-YD-dLT"/>
+                                </constraints>
+                                <color key="tintColor" red="0.65490196079999996" green="0.81960784310000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="arrowshape.turn.up.left" catalog="system"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="q5C-WA-5yN" eventType="touchUpInside" id="Sfd-Jv-Hso"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="1Qb-EA-epH" firstAttribute="top" secondItem="p2a-0B-h8u" secondAttribute="bottom" constant="20" id="4b4-qN-GmL"/>
+                            <constraint firstItem="JgE-Z6-JuG" firstAttribute="leading" secondItem="O6b-SN-I3R" secondAttribute="leading" constant="76" id="Adm-8H-1fV"/>
+                            <constraint firstItem="F0v-wx-KxD" firstAttribute="top" secondItem="JgE-Z6-JuG" secondAttribute="bottom" constant="20" id="Amc-rn-le0"/>
+                            <constraint firstItem="O6b-SN-I3R" firstAttribute="trailing" secondItem="JgE-Z6-JuG" secondAttribute="trailing" constant="76" id="GMO-St-2Yl"/>
+                            <constraint firstItem="JgE-Z6-JuG" firstAttribute="leading" secondItem="O6b-SN-I3R" secondAttribute="leading" constant="76" id="Lih-Vf-IRv"/>
+                            <constraint firstItem="O6b-SN-I3R" firstAttribute="trailing" secondItem="1Qb-EA-epH" secondAttribute="trailing" constant="76" id="Myj-oz-9hw"/>
+                            <constraint firstItem="O6b-SN-I3R" firstAttribute="trailing" secondItem="tLF-yi-uhq" secondAttribute="trailing" constant="47" id="NMp-hu-Gxf"/>
+                            <constraint firstItem="O6b-SN-I3R" firstAttribute="trailing" secondItem="p2a-0B-h8u" secondAttribute="trailing" constant="76" id="R9R-RX-7Vj"/>
+                            <constraint firstItem="O6b-SN-I3R" firstAttribute="trailing" secondItem="F0v-wx-KxD" secondAttribute="trailing" constant="76" id="Sgs-iH-6ca"/>
+                            <constraint firstItem="p2a-0B-h8u" firstAttribute="leading" secondItem="O6b-SN-I3R" secondAttribute="leading" constant="76" id="XrW-TG-ji8"/>
+                            <constraint firstItem="tLF-yi-uhq" firstAttribute="leading" secondItem="O6b-SN-I3R" secondAttribute="leading" constant="47" id="ZDt-6z-GvY"/>
+                            <constraint firstItem="p2a-0B-h8u" firstAttribute="top" secondItem="F0v-wx-KxD" secondAttribute="bottom" constant="20" id="e9V-92-Vvm"/>
+                            <constraint firstItem="1Qb-EA-epH" firstAttribute="top" secondItem="O6b-SN-I3R" secondAttribute="top" constant="597" id="gxh-MO-HLK"/>
+                            <constraint firstItem="F0v-wx-KxD" firstAttribute="leading" secondItem="O6b-SN-I3R" secondAttribute="leading" constant="76" id="h3X-Tq-XIz"/>
+                            <constraint firstItem="JgE-Z6-JuG" firstAttribute="top" secondItem="O6b-SN-I3R" secondAttribute="top" constant="91" id="ho2-8W-AzQ"/>
+                            <constraint firstItem="O6b-SN-I3R" firstAttribute="bottom" secondItem="1Qb-EA-epH" secondAttribute="bottom" id="mSM-ja-PBt"/>
+                            <constraint firstItem="tLF-yi-uhq" firstAttribute="top" secondItem="O6b-SN-I3R" secondAttribute="top" id="oRT-YW-qV0"/>
+                            <constraint firstItem="1Qb-EA-epH" firstAttribute="leading" secondItem="O6b-SN-I3R" secondAttribute="leading" constant="76" id="ovI-M4-aEj"/>
+                            <constraint firstItem="eQW-aZ-CUP" firstAttribute="leading" secondItem="O6b-SN-I3R" secondAttribute="leading" constant="47" id="rzb-2N-Ym6"/>
+                            <constraint firstItem="O6b-SN-I3R" firstAttribute="trailing" secondItem="JgE-Z6-JuG" secondAttribute="trailing" constant="76" id="v0q-gH-BUQ"/>
+                            <constraint firstItem="eQW-aZ-CUP" firstAttribute="top" secondItem="O6b-SN-I3R" secondAttribute="top" constant="20" id="vq5-yT-UTj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O6b-SN-I3R"/>
+                    </view>
+                    <connections>
+                        <outlet property="b1" destination="3rO-eN-Gbx" id="PRW-gx-vix"/>
+                        <outlet property="b10" destination="iHI-zW-TFI" id="e2g-t2-Nce"/>
+                        <outlet property="b11" destination="hAX-9L-j25" id="qrl-qr-8Cf"/>
+                        <outlet property="b12" destination="bju-sa-j4l" id="hb9-bT-s70"/>
+                        <outlet property="b13" destination="oUZ-SA-6b6" id="L8x-jw-T5J"/>
+                        <outlet property="b14" destination="XRR-gF-6ty" id="7vr-Yq-Fo6"/>
+                        <outlet property="b15" destination="dmd-8k-lMj" id="m1x-YQ-W2e"/>
+                        <outlet property="b2" destination="n53-Og-Dgi" id="ifI-5e-76X"/>
+                        <outlet property="b3" destination="cUW-ld-B0F" id="gTn-H4-xic"/>
+                        <outlet property="b4" destination="vAM-pM-0Da" id="CTf-lp-Z9Z"/>
+                        <outlet property="b5" destination="bEu-Ks-zu6" id="QsI-0a-7c5"/>
+                        <outlet property="b6" destination="7nQ-Tg-YBG" id="ylf-JX-kog"/>
+                        <outlet property="b7" destination="cO3-Nv-n7x" id="B7V-Fn-mx2"/>
+                        <outlet property="b8" destination="kXJ-Dg-gXJ" id="7Dd-Rs-Gg0"/>
+                        <outlet property="b9" destination="g5i-rs-qSU" id="9VO-YX-RcD"/>
+                        <outlet property="g1" destination="45i-cG-YZ5" id="ILB-6Q-2N5"/>
+                        <outlet property="g10" destination="dL3-Kn-qBC" id="7LS-hV-qha"/>
+                        <outlet property="g11" destination="co1-5H-Dbg" id="sZJ-vZ-QbP"/>
+                        <outlet property="g12" destination="9ao-LO-yZf" id="Ax8-wL-oOa"/>
+                        <outlet property="g13" destination="hoX-cY-xvp" id="K4t-4z-eEP"/>
+                        <outlet property="g14" destination="uXS-lI-KXL" id="2KM-8e-19Y"/>
+                        <outlet property="g15" destination="mYx-81-ASQ" id="ynH-kZ-FoI"/>
+                        <outlet property="g2" destination="zuK-b5-cjK" id="wRt-KN-dcc"/>
+                        <outlet property="g3" destination="Fxc-Ya-GGp" id="WXP-kh-r8Q"/>
+                        <outlet property="g4" destination="w8h-Kk-eE7" id="xNz-iC-g3A"/>
+                        <outlet property="g5" destination="TZX-c9-Oks" id="Vpn-HG-bzx"/>
+                        <outlet property="g6" destination="rd3-K2-Qvs" id="0YY-kV-HGo"/>
+                        <outlet property="g7" destination="rny-HD-Kld" id="IuX-ul-cha"/>
+                        <outlet property="g8" destination="fFt-CC-Xdn" id="rHa-Yn-ldK"/>
+                        <outlet property="g9" destination="3WW-6T-ElM" id="wpD-iD-T06"/>
+                        <outlet property="i1" destination="vv4-Ma-Rvg" id="59g-hU-eDA"/>
+                        <outlet property="i10" destination="XEs-Jy-G68" id="zm7-bk-DYY"/>
+                        <outlet property="i11" destination="Arj-Ms-M4g" id="dbf-5x-pkh"/>
+                        <outlet property="i12" destination="eKu-DA-kWR" id="nbk-ST-5ZI"/>
+                        <outlet property="i13" destination="yfh-Up-Kfo" id="2TJ-H2-Ui7"/>
+                        <outlet property="i14" destination="p9b-TF-uVm" id="s8Z-VC-MHG"/>
+                        <outlet property="i15" destination="W3f-ZB-r3U" id="yeg-6I-lXo"/>
+                        <outlet property="i2" destination="hrx-vZ-RvW" id="8RS-g1-jbN"/>
+                        <outlet property="i3" destination="5N5-Lx-lme" id="con-MV-jHQ"/>
+                        <outlet property="i4" destination="dbg-82-bvc" id="hzM-0p-r7U"/>
+                        <outlet property="i5" destination="ElA-Cd-Ytv" id="cTz-m2-IvE"/>
+                        <outlet property="i6" destination="aRE-qN-f8c" id="qgS-oo-yPg"/>
+                        <outlet property="i7" destination="yvi-IX-kg2" id="7ln-OW-O1x"/>
+                        <outlet property="i8" destination="agz-UB-Prw" id="vtD-SZ-hhE"/>
+                        <outlet property="i9" destination="kM1-S4-biG" id="tSX-rd-KxA"/>
+                        <outlet property="n1" destination="D51-Ob-saZ" id="vzl-nl-zla"/>
+                        <outlet property="n10" destination="48O-C2-bH5" id="zXB-IU-D7n"/>
+                        <outlet property="n11" destination="ytJ-B5-fkj" id="LOi-AV-0wW"/>
+                        <outlet property="n12" destination="cj3-Ps-fA5" id="lJw-By-2LA"/>
+                        <outlet property="n13" destination="U0h-T6-dl8" id="Wlm-vG-OBw"/>
+                        <outlet property="n14" destination="69t-fd-cbq" id="ZyL-sG-gCh"/>
+                        <outlet property="n15" destination="l7b-Zo-WbP" id="EHl-aS-xDF"/>
+                        <outlet property="n2" destination="NB7-mE-ZJA" id="NiL-pD-kyo"/>
+                        <outlet property="n3" destination="yCD-ms-zLM" id="PVc-ih-hIb"/>
+                        <outlet property="n4" destination="8CN-57-fwp" id="KyF-ty-OQk"/>
+                        <outlet property="n5" destination="VDK-L1-poz" id="eU5-eP-H30"/>
+                        <outlet property="n6" destination="Le3-sl-en7" id="sbn-7v-NRo"/>
+                        <outlet property="n7" destination="oYx-LF-nc2" id="UNC-NV-7KF"/>
+                        <outlet property="n8" destination="gdL-Jj-woh" id="B1y-9w-iOE"/>
+                        <outlet property="n9" destination="0az-AG-eRM" id="bIb-bZ-5WV"/>
+                        <outlet property="o1" destination="PSc-ZI-DrR" id="LPd-Ry-drE"/>
+                        <outlet property="o10" destination="YeA-2y-2E8" id="Xkm-di-VhZ"/>
+                        <outlet property="o11" destination="Nts-FW-yLs" id="2Uo-e6-YdE"/>
+                        <outlet property="o12" destination="3se-DA-cQa" id="KHF-BY-EkS"/>
+                        <outlet property="o13" destination="7rS-D8-ckB" id="x2B-SM-Se8"/>
+                        <outlet property="o14" destination="keh-Su-UI3" id="BRz-PE-mMY"/>
+                        <outlet property="o15" destination="Ihn-Mj-Ugj" id="z8S-Cd-LmZ"/>
+                        <outlet property="o2" destination="wUM-1h-Y3W" id="rWh-Ui-iag"/>
+                        <outlet property="o3" destination="NE7-6m-H5O" id="AYv-1M-Jyv"/>
+                        <outlet property="o4" destination="Or3-8K-fEE" id="Hd8-Qh-qtQ"/>
+                        <outlet property="o5" destination="wNc-2X-3OJ" id="oMW-PE-ziL"/>
+                        <outlet property="o6" destination="Qgz-MM-MFZ" id="3tm-rU-uOQ"/>
+                        <outlet property="o7" destination="puU-nR-803" id="Cs0-NY-TLw"/>
+                        <outlet property="o8" destination="iOB-6U-HMu" id="F0L-JU-jWu"/>
+                        <outlet property="o9" destination="oQH-dv-8mm" id="fJR-f7-4hR"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="ViewController" id="yde-92-eLh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="heH-JU-g7j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="873.91304347826099" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Bingo banner" width="320" height="100"/>
+        <image name="Bingo med pernille" width="276" height="597"/>
+        <image name="Button-2" width="300" height="100"/>
+        <image name="arrowshape.turn.up.left" catalog="system" width="64" height="52"/>
+    </resources>
+</document>
