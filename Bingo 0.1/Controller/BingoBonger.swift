@@ -226,28 +226,76 @@ class BingoBonger: UIViewController {
     var checkedButtons = [String]()
     var rows = [String]()
     
-    func popUpButtonAction() {
+    func popUpButtonAction(bingoText: String) {
         var popUpWindow: PopUpWindow!
-           popUpWindow = PopUpWindow(title: "BINGO!", text: "", buttontext: "Back to Pernille´s bingo")
+           popUpWindow = PopUpWindow(title: bingoText, text: "", buttontext: "Back to Pernille´s bingo")
            self.present(popUpWindow, animated: true, completion: nil)
-       }
+    }
     
+    func bingo(board: Int, numberOfBingos: Int){
+        let bingoText = "Bingo - \(numberOfBingos) rows"
+        popUpButtonAction(bingoText:bingoText)
+    }
     
     func checkBingo(buttonId: String){
         if !checkedButtons.contains(buttonId){
             checkedButtons.append(buttonId)
-            print("Check Bingo")
             
-            let rowNumber = String(buttonId.dropFirst())
-            rows.append(rowNumber)
-            
-            let count = rows.filter{$0 == rowNumber}.count
-            
-            if count == 5 {
-                print("BINGO on row \(rowNumber)")
-                popUpButtonAction()
+            //Check bingo
+            let rowString = String(buttonId.dropFirst())
+            rows.append(rowString)
+    
+            if rows.filter({$0 == rowString}).count == 5 {
+                let bingosInBoard1 = bingosInBoard(board: 0)
+                let bingosInBoard2 = bingosInBoard(board: 1)
+                let bingosInBoard3 = bingosInBoard(board: 2)
+                
+                let currentBoard = bingoBoard(rowString: rowString)
+                let bingosInCurrentBoard = bingosInBoard(board: currentBoard)
+                
+                //Kunne vært én stor if, men delte opp i de forskjellige brettene for lesbarhet.
+                if(currentBoard == 0 && bingosInCurrentBoard > bingosInBoard2 && bingosInCurrentBoard > bingosInBoard3){
+                    bingo(board: currentBoard, numberOfBingos: bingosInCurrentBoard)
+                } else if(currentBoard == 1 && bingosInCurrentBoard > bingosInBoard1 && bingosInCurrentBoard > bingosInBoard3){
+                    bingo(board: currentBoard, numberOfBingos: bingosInCurrentBoard)
+                }else if(currentBoard == 2 && bingosInCurrentBoard > bingosInBoard1 && bingosInCurrentBoard > bingosInBoard2){
+                    bingo(board: currentBoard, numberOfBingos: bingosInCurrentBoard)
+                }
             }
         }
+    }
+    
+    func bingoBoard(rowString: String) -> Int{
+        let rowNumber = Int(rowString)!
+        if(rowNumber > 10){
+            return 2
+        }else if(rowNumber > 5){
+            return 1
+        }else{
+            return 0
+        }
+    }
+    
+    func getRowsInBoard(board:Int) -> [String] {
+        if board == 0{
+            return Array(1...5).map{"\($0)"}
+        } else if board == 1{
+            return Array(5...10).map{"\($0)"}
+        }else{
+            return Array(10...15).map{"\($0)"}
+        }
+    }
+    
+    func bingosInBoard(board: Int) -> Int{
+        let rowsInBoard = getRowsInBoard(board: board)
+        var bingosInBoard = 0
+        for row in rowsInBoard {
+            let count = rows.filter{$0 == row}.count
+            if(count == 5){
+                bingosInBoard += 1
+            }
+        }
+        return bingosInBoard
     }
     
     func markButtonAsInactive(buttonId: String){
@@ -276,7 +324,6 @@ class BingoBonger: UIViewController {
         }
     }
 
-    
     //segueway
 
     @IBAction func backButtonPressed(_ sender: UIButton) {
