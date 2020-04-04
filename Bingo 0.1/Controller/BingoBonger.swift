@@ -232,10 +232,11 @@ class BingoBonger: UIViewController {
            self.present(popUpWindow, animated: true, completion: nil)
     }
     
-    func bingo(board: Int, numberOfBingos: Int){
-        let bingoText = "Bingo - \(numberOfBingos) rows"
-        popUpButtonAction(bingoText:bingoText)
-    }
+     func bingo(board: Int, numberOfBingos: Int){
+           let singularOrPluralRow = numberOfBingos > 1 ? "rows" : "row"
+           let bingoText = "Bingo - \(numberOfBingos) \(singularOrPluralRow)"
+           popUpButtonAction(bingoText:bingoText)
+       }
     
     func checkBingo(buttonId: String){
         if !checkedButtons.contains(buttonId){
@@ -280,9 +281,9 @@ class BingoBonger: UIViewController {
         if board == 0{
             return Array(1...5).map{"\($0)"}
         } else if board == 1{
-            return Array(5...10).map{"\($0)"}
+            return Array(6...10).map{"\($0)"}
         }else{
-            return Array(10...15).map{"\($0)"}
+            return Array(11...15).map{"\($0)"}
         }
     }
     
